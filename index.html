@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager - To Do &amp; Do Not</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo in the top right -->
+      <img src="rohit.jpg" alt="Logo" class="logo" />
+      
+      <h1>Task Manager</h1>
+      
+      <!-- Input section with two buttons -->
+      <div class="input-container">
+        <input type="text" id="task-input" placeholder="Enter your task here..." />
+        <button id="add-todo-btn">Add To-Do Task</button>
+        <button id="add-donot-btn">Add Do-Not Task</button>
+      </div>
+      
+      <!-- Two sections for tasks separated by a thin line -->
+      <div class="lists-container">
+        <div class="list-section" id="todo-section">
+          <h2>To Do</h2>
+          <ul id="todo-list"></ul>
+        </div>
+        
+        <div class="separator"></div>
+        
+        <div class="list-section" id="donot-section">
+          <h2>Do Not</h2>
+          <ul id="donot-list"></ul>
+        </div>
+      </div>
+      
+      <!-- New PDF Generation Button -->
+      <div class="pdf-container">
+        <button id="generate-pdf-btn">Generate PDF Report</button>
+      </div>
+    </div>
+
+    <!-- jsPDF library from a CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

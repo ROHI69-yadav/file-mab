@@ -1,0 +1,175 @@
+/* Base styles with neon gradient background */
+body {
+    font-family: Arial, sans-serif;
+    /* Neon combo: black, red, blue with a moving gradient effect */
+    background: linear-gradient(135deg, #000000, #ff073a, #0074d9);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .container {
+    position: relative; /* For positioning the logo */
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+  }
+  
+  /* Logo with bouncing and red glare animation */
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid red;
+    animation: bounce 2s infinite, glare 2s infinite alternate;
+  }
+  
+  /* Bounce animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+  
+  /* Glare animation for a subtle red glow */
+  @keyframes glare {
+    0% { box-shadow: 0 0 5px red; }
+    100% { box-shadow: 0 0 15px red; }
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 70px; /* Leave space for the logo */
+  }
+  
+  /* Input container styling */
+  .input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  #task-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .input-container button {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  #add-todo-btn {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  #add-donot-btn {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  /* Container for the two task lists */
+  .lists-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .list-section {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .list-section h2 {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+  
+  /* Separator as a thin vertical line */
+  .separator {
+    width: 2px;
+    background-color: #ccc;
+    margin: 0 10px;
+  }
+  
+  /* Task item styling */
+  #todo-list,
+  #donot-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .task-details {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .task-details span {
+    margin-left: 10px;
+  }
+  
+  .todo-item.completed span {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .delete-btn {
+    background: #888;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  /* PDF button styling */
+  .pdf-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #generate-pdf-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #generate-pdf-btn:hover {
+    background: #0056b3;
+  }
+  
